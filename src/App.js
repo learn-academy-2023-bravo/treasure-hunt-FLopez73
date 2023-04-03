@@ -24,11 +24,6 @@ const App = () => {
   const [count, setCount] = useState(5)
 
   const handleGamePlay = (clickedSquare) => {
-    setCount(count - 1)
-    const updatedCount = count
-    if (count === -1) {
-      return { gameRestart }
-    }
     let updateBoard = [...board]
     if (clickedSquare === treasureLocation) {
       updateBoard[clickedSquare] = "💎"
